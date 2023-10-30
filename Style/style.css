@@ -198,6 +198,7 @@ body {
   }
   .about-cafe .text-1 {
     top: 5%;
+    font-size: 6vw;
   }
   .about-cafe .text-2 {
     top: 15%;
@@ -242,6 +243,11 @@ body {
   text-transform: lowercase;
   font-family: "Festive", cursive;
   color: #ff6f59;
+}
+@media (max-width: 800px) {
+  .message h1 {
+    font-size: 15vw;
+  }
 }
 
 .historia {
