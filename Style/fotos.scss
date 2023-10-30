@@ -37,17 +37,21 @@
     }
 
     img {
-        max-width: 400px;
-        width: 50vw;
+        width: 400px;
         height: 80%;
         object-fit: cover;
         object-position: center;
+        @media (max-width: 800) {
+            width: 200px;
+        }
      
 
     }
     .foto-2 {
         width: 90vw;
     }
+
+   
  
 
 }

@@ -279,13 +279,17 @@ body {
   gap: 10vw;
 }
 .historia img {
-  max-width: 400px;
-  width: 50vw;
+  width: 400px;
   height: 80%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+}
+@media (max-width: 800) {
+  .historia img {
+    width: 200px;
+  }
 }
 .historia .foto-2 {
   width: 90vw;
