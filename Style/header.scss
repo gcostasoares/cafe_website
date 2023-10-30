@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Festive&family=Merriweather:wght@300&family=Quattrocento&family=Rock+Salt&family=Unna&display=swap');
+
+$mainFont: 'Merriweather', serif;
+$titleFont: 'Quattrocento', serif;
+$textFont: 'Unna', serif;
+$messageFont: 'Festive', cursive;
+$rockyFont: 'Rock Salt', cursive;
+
+$capiBlue: #2da1d2;
+$capiRed: #ff6f59;
+$capiBg: #e5f7fa;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 300vh;
+}
+
+.box {
+  width: 15vw;
+ 
+  height: 250px;
+  overflow: hidden;
+}
+
+.line1-letter,
+.line2-letter,
+.line3-letter,
+.line4-letter {
+  font-family: $titleFont;
+  font-size: 15vw;
+  line-height: 280px;
+  position: relative;
+  left: -330px;
+  transition: all 0.25s linear;
+}
+
+
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 320px;
+  gap: 60px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+
+ 
+}
+
+.header::before {
+  content: "";
+  background-image: url(./Pedraazul.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: greenyellow;
+  filter: grayscale(100%) brightness(0.8) contrast(1.5); /* Add this line to make the background black and white */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: all 0.9s ease;
+}
+
+.main-line1,
+.main-line2,
+.main-line3,
+.main-line4 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: row;
+  color: #4C2E05;
+  
+
+}
+.main-line4{
+  padding-right: -15px;
+  margin-right: -15px;
+}
+
+
+.espirito-santo {
+  z-index: 2;
+  margin-top: -100px;
+  h1 {
+    color: $capiBlue;
+    font-family: $mainFont;
+    font-size: 100px;
+    z-index: 2;
+    span {
+      color: $capiRed;
+    }
+  }
+}
+
+
+
+.message {
+  height: 300vh;
+}
+
+
+@media (max-width: 1000px)
+ {
+  
+.box {
+  width: 17vw;
+}
+
+}
+
+@media (max-width: 800px)
+ {
+
+  .espirito-santo{
+    margin-left: 5vw;
+  }
+.box {
+  width: 17vw;
+}
+
+}
