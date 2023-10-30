@@ -79,14 +79,9 @@ $rockyFont: 'Rock Salt', cursive;
       z-index: 2;
     }
 
-    @media (max-width: 800px){
-      img {
-        left: 45%;
-        transform: scale(0.8);
-      }
-    }
+   
 
-    @media (max-width: 500px) {
+    @media (max-width: 800px) {
       .text {
         margin-left: 0;
         width: 32vw;
