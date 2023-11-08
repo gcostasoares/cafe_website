@@ -32,8 +32,9 @@ $capiBg: #e5f7fa;
         img {
             
             width: 210vw;
-            min-width: 2000px;
+            min-width: 3000px;
         }
+        
     }
 }
 
@@ -63,6 +64,8 @@ h1 {
 
     @media (max-width: 800px) {
         font-size: 20vw;
+        text-align: center;
+        left: 2%;
     }
 };
 };

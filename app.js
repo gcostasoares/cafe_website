@@ -33,17 +33,13 @@ $(document).ready(function() {
     var titleMessage = $('.title-message-h1');
     var titleMessageposition = titleMessage.offset().top;
 
-
     $(window).scroll(function() {
         var scrollPosition = $(this).scrollTop();
-        
-   
 
         if (scrollPosition >= scrollThreshold) {
             var scaleValue = 1 + (scrollPosition - scrollThreshold) / 1300;
-            
 
-            if (scrollPosition > 1500 && scrollPosition < 2500) { // Fixed the condition
+            if (scrollPosition > 1500 && scrollPosition < 2500) {
                 kaffeeImage.css({
                     'opacity' : '1',
                 });
@@ -53,7 +49,6 @@ $(document).ready(function() {
                 });
             }
         }
-
 
         if (scrollPosition > scrollThresholdforText1 && scrollPosition < 2500) {
             text1.css({
@@ -73,63 +68,62 @@ $(document).ready(function() {
             });
         } else {
             text2.css({
-               
                 'opacity': '0',
             });
         }
         if (scrollPosition > titleMessageposition - 200) {
             oCara.css({
                 'opacity': '1',
-
             });
-            
-
         } else {
             oCara.css({
                 'opacity': '0',
             });
-            
         }
-      
-
-
-        
     });
 });
 
 var stickySection = [...document.querySelectorAll('.sticky')];
 
-
-window.addEventListener('scroll', (e) => {
-    for(let i = 0; i < stickySection.length; i++) {
-        transform(stickySection[i])
+// Function to activate or deactivate the scroll event listener
+function handleScrollTransform() {
+    if (window.innerWidth >= 800) {
+        window.addEventListener('scroll', activateScrollTransform);
+    } else {
+        window.removeEventListener('scroll', activateScrollTransform);
     }
-});
+}
+if (window.innerWidth > 800) {
+  
 
-var historiaSection = $(".historia");
-var historiaHeight = historiaSection.height();
-var historiaInitialHeight = historiaHeight;
+// Function to activate the scroll transformation
+function activateScrollTransform() {
+    for (let i = 0; i < stickySection.length; i++) {
+        transform(stickySection[i]);
+    }
+}
 
-function transform (section){
-    const historiaSection = document.getElementById('historia');
-    const offsetTop = section.parentElement.offsetTop;
-    const scrollSection = section.querySelector('.scroll-section');
-    var newscrollPosition = $(this).scrollTop();
+// Initial check and event listener setup
+handleScrollTransform();
+
+// Event listener for changes in screen width
+window.addEventListener('resize', handleScrollTransform);
+
+
+
+
+    function transform(section) {
+        const historiaSection = document.getElementById('historia');
+        const offsetTop = section.parentElement.offsetTop;
+        const scrollSection = section.querySelector('.scroll-section');
+        var newscrollPosition = window.scrollY;
+        
+        var scrollPercentage = (newscrollPosition / (document.body.scrollHeight - window.innerHeight)) * 100;
+
+        let percentage = ((window.scrollY - offsetTop)) / window.innerHeight * 100;
     
-    var scrollPercentage = (newscrollPosition / ($(document).height() - $(window).height())) * 100;
+        percentage = percentage < 68 ? 68 : percentage > 175 ? 175 : percentage;
 
-    let percentage = ((window.scrollY - offsetTop)) / window.innerHeight * 100;
- 
-    percentage = percentage < 68 ? 68 : percentage > 175 ? 175 : percentage;
-
-    scrollSection.style.transform = `translate3d(${-(percentage -80)}vw, 0, 0)`;
-    
-
-   
-    
-};
-
-
-
-
-
+        scrollSection.style.transform = `translate3d(${-(percentage - 80)}vw, 0, 0)`;
+    }
+}
