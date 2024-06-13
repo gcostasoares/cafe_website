@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Festive&family=Merriweather:wght@300&family=Quattrocento&family=Rock+Salt&family=Unna&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Style+Script&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Quattrocento", serif;
+  background-color: #EFF2C0;
+  background: transparent;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  height: 100vh;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  flex: 0 1 100%;
+}
+
+.main {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 500;
+  border-bottom: 1px solid transparent;
+  background-color: transparent;
+}
+
+.container {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 0rem;
+  width: 100%;
+  padding: 0 3rem;
+  max-width: 80rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.image-grid {
+  height: auto;
+}
+
+.hero-text img {
+  width: 15vw;
+  max-width: 300px;
+  min-width: 190px;
+}
+
+.hero-wrapper-row img {
+  width: 40vw;
+  max-width: 500px;
+  min-width: 220px;
+}
+
+.title {
+  width: 45vw;
+}
+
+.hero-wrapper-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: flex-start;
+}
+
+.hero-wrapper-container img,
+.hero-wrapper-container p {
+  margin-left: 11vw;
+}
+
+.hero-wrapper-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: calc(1.5rem * 2);
+}
+@media (min-width: 900px) {
+  .hero-wrapper-row {
+    flex-direction: row;
+  }
+  .hero-wrapper-row img {
+    transform: translateY(-170px);
+    margin-bottom: 0;
+  }
+}
+
+.image-grid-text h3 {
+  margin: calc(1.5rem * 3) 0;
+}
+
+.image-grid-text {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+.image-grid-text h3 {
+  text-align: center;
+}
+
+@media (min-width: 900px) {
+  .image-grid {
+    height: 220vh;
+  }
+  .image-grid-content {
+    position: relative;
+    width: 100%;
+  }
+  .image-content:nth-child(1) {
+    top: 0;
+    left: 0;
+  }
+  .image-content:nth-child(2) {
+    top: 520px;
+    right: 45%;
+  }
+  .image-content:nth-child(3) {
+    top: 31px;
+    left: 50%;
+  }
+  .image-content:nth-child(4) {
+    top: 289px;
+    right: 0;
+  }
+  .image-content:nth-child(5) {
+    top: 600px;
+    left: 0;
+  }
+  .image-content:nth-child(1),
+  .image-content:nth-child(2),
+  .image-content:nth-child(3),
+  .image-content:nth-child(4) {
+    position: absolute;
+    width: 30vw;
+    max-width: 314px;
+  }
+  .image-content:nth-child(5) {
+    position: absolute;
+    width: 10vw;
+  }
+  .image-content:nth-child(5) h4 {
+    text-align: start;
+    font-size: calc(1.5rem * 0.7);
+  }
+}
+.image-grid-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: calc(1.5rem * 1);
+}
+
+.image-content:nth-child(1),
+.image-content:nth-child(2),
+.image-content:nth-child(3),
+.image-content:nth-child(4) {
+  width: 100%;
+}
+
+.image-content:nth-child(5) {
+  text-align: center;
+  font-size: calc(1.5rem * 1.3);
+  margin: calc(1.5rem * 2) 0;
+}
+
+footer {
+  height: 100vh;
+  background-color: black;
+  color: white;
+  padding: calc(1.5rem * 3) 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.site-wrap {
+  background-image: url(../assets/ocara.jpg);
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%) brightness(0.8) contrast(1);
+  width: 100vw;
+  color: white;
+}
+
+.site-wrap-container {
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: calc(1.5rem * 3) 3rem;
+}
+.site-wrap-container h3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: calc(1.5rem * 3);
+  margin: 0;
+}
+@media (max-width: 900px) {
+  .site-wrap-container h3 {
+    font-size: calc(1.5rem * 2);
+  }
+}
+
+h1 {
+  font-size: calc(1.5rem * 2.5);
+  margin: calc(1.5rem * 1.5) 0;
+  color: #005377;
+}
+
+h3 {
+  font-size: calc(1.5rem * 1.3);
+  margin: calc(1.5rem * 1.5) 0;
+}
+
+p {
+  font-size: calc(1.5rem * 1);
+  margin: calc(1.5rem * 1.5) 0;
+}
+
+h1, h3 p {
+  margin: calc(1.5rem * 1) 0;
+  color: #A52422;
+}/*# sourceMappingURL=style.css.map */
